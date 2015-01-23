@@ -15,3 +15,18 @@ def solution(n)
 
     value = ((factors[mid] + factors[mid+1]) * 2)
 end
+
+#### Rd 2 ###
+
+def solution(n)
+    per = 0;
+    1.upto(Math.sqrt(n).floor).each do |a|
+        next if n % a > 0 
+        b = n / a 
+        per = 2 * (a + b)
+    end 
+
+    per
+end
+
+## Score 100/100
